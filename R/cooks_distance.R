@@ -7,11 +7,11 @@
 #' @return A numeric vector of Cook's Distance values for each observation in the model.
 #' @examples
 #' model <- lm(mpg ~ wt + hp, data = mtcars)
-#' cooksD <- custom_cooks_distance(model)
+#' cooksD <- cooks_distance(model)
 #' print(cooksD)
 #' @export
 #--------------------------
-custom_cooks_distance <- function(model) {
+cooks_distance <- function(model) {
   if (!inherits(model, "lm")) {
     stop("The input model must be of class 'lm'.")
   }

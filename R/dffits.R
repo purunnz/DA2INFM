@@ -7,10 +7,10 @@
 #' @return A numeric vector of DFFITS values for each observation in the model.
 #' @examples
 #' model <- lm(mpg ~ wt + hp, data = mtcars)
-#' dffits_values <- custom_dffits_measure(model)
+#' dffits_values <- dffits_measure(model)
 #' print(dffits_values)
 #' @export
-custom_dffits_measure <- function(model) {
+dffits_measure <- function(model) {
   if (!inherits(model, "lm")) stop("Model must be an object of class 'lm'.")
 
   # Extract model components

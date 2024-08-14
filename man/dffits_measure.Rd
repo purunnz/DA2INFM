@@ -2,16 +2,21 @@
 % Please edit documentation in R/dffits.R
 \name{dffits_measure}
 \alias{dffits_measure}
-\title{DFFITS Measure}
+\title{Custom DFFITS Measure}
 \usage{
 dffits_measure(model)
 }
 \arguments{
-\item{model}{A linear model object (class lm).}
+\item{model}{A linear model object of class 'lm'.}
 }
 \value{
-A vector of DFFITS values.
+A numeric vector of DFFITS values for each observation in the model.
 }
 \description{
-This function calculates DFFITS for an lm object.
+This function calculates the DFFITS values for each observation in a linear model without using the built-in dffits function.
+}
+\examples{
+model <- lm(mpg ~ wt + hp, data = mtcars)
+dffits_values <- dffits_measure(model)
+print(dffits_values)
 }

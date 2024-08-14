@@ -2,16 +2,21 @@
 % Please edit documentation in R/hadis_influence.R
 \name{hadis_influence_measure}
 \alias{hadis_influence_measure}
-\title{Hadi's Influence Measure}
+\title{Custom Hadi's Influence Measure}
 \usage{
 hadis_influence_measure(model)
 }
 \arguments{
-\item{model}{A linear model object (class lm).}
+\item{model}{A linear model object of class 'lm'.}
 }
 \value{
-A vector of Hadi's Influence Measure values.
+A numeric vector of Hadi's Influence Measure values for each observation.
 }
 \description{
-This function calculates Hadi's Influence Measure for an lm object.
+This function calculates Hadi's Influence Measure for each observation in a linear model.
+}
+\examples{
+model <- lm(mpg ~ wt + hp, data = mtcars)
+hadi_influence_values <- hadis_influence_measure(model)
+print(hadi_influence_values)
 }

@@ -35,13 +35,13 @@ calculate_influence_measures <- function(data, model, measure = "cooks") {
   # Perform the selected influence measure calculation
   if (measure == "cooks") {
     # influence_values <- cooks.distance(model)
-    influence_values <- custom_cooks_distance(model)
+    influence_values <- cooks_distance(model)
   } else if (measure == "dffits") {
     # influence_values <- dffits(model)
-    influence_values <- custom_dffits_measure(model)
+    influence_values <- dffits_measure(model)
   } else if (measure == "hadi") {
     # influence_values <- custom_hadis_influence_measure(model)
-    influence_values <- custom_hadis_influence_measure(model)
+    influence_values <- hadis_influence_measure(model)
   }
 
   return(influence_values)

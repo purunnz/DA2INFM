@@ -7,10 +7,10 @@
 #' @return A numeric vector of Hadi's Influence Measure values for each observation.
 #' @examples
 #' model <- lm(mpg ~ wt + hp, data = mtcars)
-#' hadi_influence_values <- custom_hadis_influence_measure(model)
+#' hadi_influence_values <- hadis_influence_measure(model)
 #' print(hadi_influence_values)
 #' @export
-custom_hadis_influence_measure <- function(model) {
+hadis_influence_measure <- function(model) {
   # Check if the input is a linear model
   if (!inherits(model, "lm")) {
     stop("The input model must be of class 'lm'.")

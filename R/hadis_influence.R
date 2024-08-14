@@ -1,21 +1,4 @@
 # R/hadis_influence.R
-
-#' Hadi's Influence Measure
-#'
-#' This function calculates Hadi's Influence Measure for an lm object.
-#' @param model A linear model object (class lm).
-#' @return A vector of Hadi's Influence Measure values.
-#' @export
-hadis_influence_measure <- function(model) {
-  if (!inherits(model, "lm")) stop("Model must be an object of class 'lm'.")
-  # Implementation of Hadi's Influence Measure
-  # For simplicity, this is a placeholder implementation
-  leverage <- hatvalues(model)
-  residuals <- rstudent(model)
-  hadi_values <- leverage / (1 - leverage) + residuals^2
-  return(hadi_values)
-}
-
 #' Custom Hadi's Influence Measure
 #'
 #' This function calculates Hadi's Influence Measure for each observation in a linear model.

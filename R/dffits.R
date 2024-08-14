@@ -1,19 +1,4 @@
 # R/dffits.R
-
-#' DFFITS Measure
-#'
-#' This function calculates DFFITS for an lm object.
-#' @param model A linear model object (class lm).
-#' @return A vector of DFFITS values.
-#' @export
-dffits_measure <- function(model) {
-  if (!inherits(model, "lm")) stop("Model must be an object of class 'lm'.")
-  dffits_values <- dffits(model)
-  return(dffits_values)
-}
-
-
-
 #' Custom DFFITS Measure
 #'
 #' This function calculates the DFFITS values for each observation in a linear model without using the built-in dffits function.

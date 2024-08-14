@@ -2,8 +2,8 @@ Package: DA2INFM
 Type: Package
 Title: Diagnostic Analysis for Influence Measures
 Version: 0.1.0
-Author: Your Name
-Maintainer: Your Name <your.email@domain.com>
+Author: Soonsung Bae
+Maintainer: Soonsung Bae <purun90@gmail.com>
 Description: This package provides tools for performing diagnostic analysis
     on linear regression models. It includes functions to compute and plot 
     various influence measures such as Cook's Distance, DFFITS, and Hadi's 

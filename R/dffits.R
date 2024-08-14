@@ -13,6 +13,7 @@ dffits_measure <- function(model) {
 }
 
 
+
 #' Custom DFFITS Measure
 #'
 #' This function calculates the DFFITS values for each observation in a linear model without using the built-in dffits function.

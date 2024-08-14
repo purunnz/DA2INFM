@@ -1,18 +1,4 @@
 # R/cooks_distance.R
-
-#' Cook's Distance Measure
-#'
-#' This function calculates Cook's Distance for an lm object.
-#' @param model A linear model object (class lm).
-#' @return A vector of Cook's Distance values.
-#' @export
-cooks_distance <- function(model) {
-  if (!inherits(model, "lm")) stop("Model must be an object of class 'lm'.")
-  cooksD <- cooks.distance(model)
-  return(cooksD)
-}
-
-
 #' Custom Cook's Distance Measure
 #'
 #' This function calculates Cook's Distance for a linear model object without using the built-in cooks.distance function.
